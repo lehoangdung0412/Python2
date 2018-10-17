@@ -14,7 +14,7 @@ class Customer(admin.ModelAdmin):
 
 @admin.register(models.orders)
 class Order(admin.ModelAdmin):
-    list_display = ['id', 'customer_id', 'registered', 'delivery_add_id', 'payment_type', 'date', 'status', 'session', 'total']
+    list_display = ['id', 'customers_id', 'registered', 'delivery_add_id', 'payment_type', 'date', 'status', 'session', 'total']
 
 
 @admin.register(models.delivery_addresses)
