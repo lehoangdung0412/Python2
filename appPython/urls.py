@@ -24,5 +24,5 @@ urlpatterns = [
     path('', shop1.ShowProduct.as_view(), name='product'),
     path('detail/<int:pk>/', shop1.ProductDetail.as_view(), name='detail')
 ]
-
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+#
+# urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

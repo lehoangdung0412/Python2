@@ -51,7 +51,7 @@ class categories(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=50)
     description = models.TextField()
-    image = models.ImageField(blank=True, verbose_name='Post categories')
+    image = models.CharField(max_length=255)
 
     def __str__(self):
         return self.name
@@ -62,7 +62,7 @@ class products(models.Model):
     cat_id = models.ForeignKey(categories, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.TextField()
-    image = models.ImageField(blank=True, verbose_name='Post products')
+    image = models.CharField(max_length=255)
     price = models.DecimalField(max_digits=12, decimal_places=0)
 
     def __str__(self):
