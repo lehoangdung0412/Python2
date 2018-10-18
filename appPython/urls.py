@@ -21,7 +21,8 @@ from django.conf.urls.static import static
 from web_app import views as shop1
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', shop1.ShowProduct.as_view(), name='product')
+    path('', shop1.ShowProduct.as_view(), name='product'),
+    path('detail/<int:pk>/', shop1.ProductDetail.as_view(), name='detail')
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
