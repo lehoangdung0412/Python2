@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+{% block content %}
+    {% if object_list %}
+        <h2>List category</h2>
+        <div style="padding-left:1rem">
+            <ul>
+                {% for categories in object_list %}
+                    <li><a href="{% url 'web_app:detailCat' categories.id %}">{{ categories.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No polls are available.</p>
+        </div>
+    {% endif %}
+{% endblock %}
